@@ -2134,6 +2134,7 @@ type SecurityIndicationExtIEs struct {
 	Id             ProtocolExtensionID
 	Criticality    Criticality
 	ExtensionValue SecurityIndicationExtIEsExtensionValue `aper:"openType,referenceFieldName:Id"`
+	//ExtensionValue SecurityIndicationExtIEsExtensionValue `aper:"valueExt,referenceFieldName:Id"`
 }
 
 const (
@@ -2143,7 +2144,7 @@ const (
 
 type SecurityIndicationExtIEsExtensionValue struct {
 	Present                             int
-	MaximumIntegrityProtectedDataRateDL *MaximumIntegrityProtectedDataRate /* Do not find the Reference Field Value */
+	MaximumIntegrityProtectedDataRateDL *MaximumIntegrityProtectedDataRate `aper:"referenceFieldValue:151"`
 }
 
 type SecurityResultExtIEs struct {
