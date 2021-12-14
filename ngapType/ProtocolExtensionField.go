@@ -2134,7 +2134,6 @@ type SecurityIndicationExtIEs struct {
 	Id             ProtocolExtensionID
 	Criticality    Criticality
 	ExtensionValue SecurityIndicationExtIEsExtensionValue `aper:"openType,referenceFieldName:Id"`
-	//ExtensionValue SecurityIndicationExtIEsExtensionValue `aper:"valueExt,referenceFieldName:Id"`
 }
 
 const (
